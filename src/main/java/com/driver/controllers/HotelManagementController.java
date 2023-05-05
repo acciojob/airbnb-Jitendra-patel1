@@ -30,7 +30,7 @@ public class HotelManagementController {
         //in all other cases return SUCCESS after successfully adding the hotel to the hotelDb.
         if(hotel==null || hotel.getHotelName()==null)
             return "FAILURE";
-        else if(hotelMap.containsKey(hotel))
+        else if(hotelMap.containsKey(hotel.getHotelName()))
             return  "FAILURE";
         else
             hotelMap.put(hotel.getHotelName(),hotel);
